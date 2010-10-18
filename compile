@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Directories
+SRCDIR="src"
+BUILDDIR="build"
+MAINFILE="uml-prezentace.tex"
+LOGFILE="uml-prezentace.log"
+OUTFILE="uml-prezentace.pdf"
+
+# Check workdir
+SCRIPTDIR=`which "$0"`
+SCRIPTDIR=`dirname "$SCRIPTDIR"`
+cd $SCRIPTDIR
+
+# Check build directory
+if [ ! -d "$BUILDDIR" ] ; then
+	mkdir -v "$BUILDDIR"
+fi
+if [ ! -w "$BUILDDIR" ] ; then
+	echo "Cannot write to directory $BUILDDIR"
+	exit 1
+fi
+
+# Copy srcdir directory structure
+find "$SRCDIR" -type d -name "*" | while read DIRNAME ;
+do
+	if [ ! -d "$BUILDDIR/$DIRNAME" ] ; then
+		mkdir -v "$BUILDDIR/$DIRNAME"
+	fi
+done
+
+# Let's compile it
+pdflatex -file-line-error -output-directory "$BUILDDIR" "$MAINFILE"
+
+success=$?
+
+if grep -q "LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right." "$BUILDDIR/$LOGFILE" ; then
+	pdflatex -file-line-error -output-directory "$BUILDDIR" "$MAINFILE"
+fi
+
+
+if [ -f "$BUILDDIR/$OUTFILE" ] ; then
+	mv -v "$BUILDDIR/$OUTFILE" "$OUTFILE"
+fi
+
+echo
+echo "Done."
+echo
+
+exit $success
