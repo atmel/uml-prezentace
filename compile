@@ -43,6 +43,10 @@ if [ -f "$BUILDDIR/$OUTFILE" ] ; then
 	mv -v "$BUILDDIR/$OUTFILE" "$OUTFILE"
 fi
 
+#~ if [ -f "$BUILDDIR/$LOGFILE" ] ; then
+	#~ mv -v "$BUILDDIR/$LOGFILE" "$LOGFILE"
+#~ fi
+
 echo
 echo "Done."
 echo
