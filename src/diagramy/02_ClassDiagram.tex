@@ -1,1 +1,51 @@
 \subsection{Diagram tříd}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%Slide
+
+\begin{frame}{Diagram tříd}
+
+\begin{itemize}[<+->]
+    \item<+->Strukturní diagram objektového modelování
+    \item<+->Většina konceptů má přímý ekvivalent v objektovém programování
+    \item<+->Různě podrobné diagramy v různých fázích vývoje 
+             (třídy se rozpadají na podtřídy podle hrubosti návrhu)
+\end{itemize}
+
+\begin{columns}[T]
+
+    \begin{column}{0.45\textwidth}
+        \newline
+        \onslide<4->Třída  
+        \begin{itemize}[<+->]
+            \item<+->Jméno
+            \item<+->Artibuty
+            \item<+->Metody, Operace
+            \item<+->Viditelnost:
+            \begin{itemize}
+                \item + Public
+                \item \textendash ~~Private
+                \item \# Protected
+                \item \~{} ~Package
+            \end{itemize}
+            
+            \item<+->Rozsah (Scope):
+            \begin{itemize}
+                \item Instance
+                \item Klasifikátor (static)
+            \end{itemize}
+        \end{itemize}
+    \end{column}
+
+    \begin{column}{0.55\textwidth}
+		\onslide<4->
+		\begin{figure}
+			\pgfimage[width=40mm]{img/diagramy/Class/Class.png}
+		\end{figure}
+    \end{column}
+
+\end{columns}
+\end{frame}
+                     
