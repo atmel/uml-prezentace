@@ -152,24 +152,40 @@
 \begin{frame}{Typy relací}
 
 \onslide<+-> Základní typy vztahů jsou
-\bigskip
 
 \begin{columns}[T]
 
-	\begin{column}{0.5\textwidth}
+	\begin{column}{0.7\textwidth}
 		\begin{itemize}
 			\item<+-> Asociace
 			\onslide<+->
 			\begin{itemize}
 				\item Obecná souvislost předmětů
+				\item Mohou být n-ární
+				\item Speciální varianty binárních: agregace, kompozice
 			\end{itemize}
+			
 			\item<+-> Závislost
+			\begin{itemize}
+				\item Změna v jednom předmětu způsobí změnu v druhém
+			\end{itemize}
+			
 			\item<+-> Generalizace
+			\onslide<+->
+			\begin{itemize}
+				\item V opačném směru specializace
+			\end{itemize}
+			
 			\item<+-> Realizace
+			\onslide<+->
+			\begin{itemize}
+				\item Dohoda a plnění dohody
+				\item Např. rozhraní a třída
+			\end{itemize}
 		\end{itemize}
 	\end{column}
 
-	\begin{column}{0.5\textwidth}
+	\begin{column}{0.3\textwidth}
 		\begin{flushleft}
 		\onslide<1->
 		\begin{figure}
@@ -188,9 +204,45 @@
 
 \begin{frame}{Druhy diagramů}
 
-
+\begin{figure}
+	\includegraphics[width=100mm]{img/diagramy.png}
+	\caption{Hierarchie diagramů na diagramu tříd}
+\end{figure}
 	
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Slide
+
+\begin{frame}{Druhy diagramů}
+
+\begin{itemize}
+	\item<+-> Strukturní diagramy
+	\onslide<+->
+	\begin{itemize}
+		\item Ukazují strukturu
+		\item Dokumentace architektury
+	\end{itemize}
+	
+	\item<+-> Diagramy chování
+	\onslide<+->
+	\begin{itemize}
+		\item Ilustrují dynamiku
+		\item Dokumentace funkcionality
+	\end{itemize}
+
+	\item<+-> Diagramy interakce
+	\onslide<+->
+	\begin{itemize}
+		\item Typ diagramů chování
+		\item Iterakce mezi částmi systému
+		\item Výměna kontroly a dat
+	\end{itemize}
+
+\end{itemize}
+	
+\end{frame}
+
 
 %~ \begin{itemize}
 %~ 
