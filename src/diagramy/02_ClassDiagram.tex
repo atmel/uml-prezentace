@@ -1,4 +1,4 @@
-\subsection{Diagram tříd}
+\subsection{Diagram tříd I}
 
 %% Class diagram - popis, časté použití, příklad
 
@@ -8,41 +8,36 @@
 
 \begin{frame}{Diagram tříd}
 
-Diagram tříd (Class Diagram)
+\onslide<+->Diagram tříd (Class Diagram)
 \begin{itemize}[<+->]
-    \item<+->Strukturní diagram objektového modelování
-    \item<+->Většina konceptů má přímý ekvivalent v objektovém programování
-    \item<+->Různě podrobné diagramy v různých fázích vývoje 
+    \item Strukturní diagram objektového modelování
+    \item Většina konceptů má přímý ekvivalent v objektovém programování
+    \item Různě podrobné diagramy v různých fázích vývoje 
              (třídy se rozpadají na podtřídy podle hrubosti návrhu)
 \end{itemize}
 
 \begin{columns}[T]
 
-    \begin{column}{0.45\textwidth}
-        %\newline
-        \onslide<4->Třída  
-        \begin{itemize}[<+->]
-            \item<+->Jméno
-            \item<+->Artibuty
-            \item<+->Metody, Operace
-            \item<+->Viditelnost:
+    \begin{column}{0.40\textwidth}
+        \onslide<5->Třída  
+        \begin{itemize}
+            \item<6-> Jméno
+            \item<6-> Artibuty
+            \item<6-> Metody, Operace
+            \item<6-> Viditelnost:
+            \onslide<7->
             \begin{itemize}
                 \item + Public
                 \item \textendash ~~Private
                 \item \# Protected
-                \item \begin{verbatim}~\end{verbatim} ~Package
+                \item $\sim$ ~Package
             \end{itemize}
             
-            \item<+->Rozsah (Scope):
-            \begin{itemize}
-                \item Instance
-                \item Klasifikátor (static)
-            \end{itemize}
         \end{itemize}
     \end{column}
 
     \begin{column}{0.55\textwidth}
-		\onslide<4->
+		\onslide<5->
 		\begin{figure}
 			\pgfimage[width=40mm]{img/diagramy/Class/class.png}
 		\end{figure}
@@ -51,3 +46,79 @@ Diagram tříd (Class Diagram)
 \end{columns}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%Slide
+
+\begin{frame}{Diagram tříd II}
+
+\onslide<+->Rozsah (Scope)
+\begin{itemize}
+    \item<+-> Instance
+    \onslide<+->
+    \begin{itemize}
+        \item Každá instance má vlastní kopii atributu
+        \item Metoda může měnit instanci
+    \end{itemize}
+    
+    \item<+-> Classifier
+    \onslide<+->
+    \begin{itemize}
+        \item Odpovídá static atributům a metodám
+    \end{itemize}
+\end{itemize}
+
+\onslide<+->Abstraktní třídy
+\begin{itemize}[<+->]
+    \item Jméno třídy je psané kurzívou
+\end{itemize}
+
+\onslide<+->Vztahy (Relationship)
+\begin{itemize}
+    \item<+-> Mohou být pojmenovány (přehlednost)
+    \item<+-> Jména rolí (oba konce)
+    \onslide<+->
+    \begin{itemize}
+        \item Mají viditelnost
+        \item Implementace většinou jako metoda třídy
+    \end{itemize}
+    
+    \item<+-> Arita (oba konce)
+    \onslide<+->
+    \begin{itemize}
+        \item 0..1 Nejvýš jedna
+        \item 1 Právě jedna
+        \item 0..*, * Libovolně
+        \item 1..* Alespoň jedna
+    \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%Slide
+
+\begin{frame}{Diagram tříd III}
+
+Analýza
+
+\begin{figure}
+	 \pgfimage[width=80mm]{img/diagramy/Class/analysis-level.png}
+\end{figure}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%Slide
+
+\begin{frame}{Diagram tříd IV}
+
+Implementace
+
+\begin{figure}
+	 \pgfimage[width=100mm]{img/diagramy/Class/design-level.png}
+\end{figure}
+
+\end{frame}
